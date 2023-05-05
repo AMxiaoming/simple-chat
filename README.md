@@ -6,9 +6,9 @@
 >
 > **tip：如果不需要此弹框，则可以直接在env文件内填写`VUE_APP_BASE_API` = `你的caht秘钥`**
 >
-> <img src="C:\Users\15890\AppData\Roaming\Typora\typora-user-images\image-20230505141729128.png" alt="image-20230505141729128" style="zoom: 50%;" />
+> <img src="./docs/c1.png" alt="image-20230505141729128" style="zoom: 50%;" />
 >
-> <img src="C:\Users\15890\AppData\Roaming\Typora\typora-user-images\image-20230505101851583.png" alt="image-20230505101851583" style="zoom:50%;" />
+> <img src="./docs/c2.png" alt="image-20230505101851583" style="zoom:50%;" />
 
 - [Simple-chat](#Simple-chat)
   - [介绍](#介绍)
@@ -155,14 +155,15 @@ pnpm build
 
 <div style="display: flex; gap: 20px;">
 	<div style="text-align: center">
-		<img style="max-width: 100%" src="C:\Users\15890\Pictures\Saved Pictures\微信图片_20230505140946.jpg" alt="微信" />
+		<img style="max-width: 100%" src="./docs/wechat.jpg" alt="微信" />
 		<p>WeChat Pay</p>
 	</div>
 	<div style="text-align: center">
-		<img style="max-width: 100%" src="C:\Users\15890\Pictures\Saved Pictures\微信图片_20230505141001.jpg" alt="支付宝" />
+		<img style="max-width: 100%" src="./docs/alipay.jpg" alt="支付宝" />
 		<p>Alipay</p>
 	</div>
 </div>
+
 
 
 ## 联系方式
