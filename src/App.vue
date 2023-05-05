@@ -102,6 +102,7 @@ export default {
         this.chatText = '接口请求频繁，请稍后重试'
       } else if (res.content && res.content.status === 401) {
         this.openAIKey = ''
+        this.keyValue =''
         this.chatText = '请填写正确的apiKey'
       } else {
         this.chatText = '未知错误，请稍后重试'

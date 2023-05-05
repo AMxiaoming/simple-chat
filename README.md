@@ -1,14 +1,14 @@
 # Simple-chat
 
-> 声明：此项目只发布于 GitHub、Gitee，免费且作为开源学习使用。并且不会有任何形式的卖号、付费服务、讨论群、讨论组等行为。谨防受骗。
+> 声明：此项目是基于openAI3.5模型的H5人工智能聊天项目，只发布于 GitHub、Gitee，免费且作为开源学习使用。并且不会有任何形式的卖号、付费服务、讨论群、讨论组等行为。谨防受骗。
 >
 > **此项目只适配于H5端**，**线上地址：http://47.242.53.5:888/**
 >
 > **tip：如果不需要此弹框，则可以直接在env文件内填写`VUE_APP_BASE_API` = `你的caht秘钥`**
 >
-> <img src="./docs/c1.png" alt="image-20230505141729128" style="zoom: 50%;" />
+> <img src="./docs/c1.png" alt="image-20230505141729128" style="zoom: 33%;" />
 >
-> <img src="./docs/c2.png" alt="image-20230505101851583" style="zoom:50%;" />
+> <img src="./docs/c2.png" alt="image-20230505101851583" style="zoom: 33%;" />
 
 - [Simple-chat](#Simple-chat)
   - [介绍](#介绍)
