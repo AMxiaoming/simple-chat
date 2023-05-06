@@ -6,9 +6,9 @@
 >
 > **tip：如果不需要此弹框，则可以直接在env文件内填写`VUE_APP_API_KEY` = `你的caht秘钥`**
 >
-> <img src="./docs/c1.png" alt="image-20230505141729128" style="zoom: 33%;" />
+> <img src="./docs/c1.png"  style="zoom: 33%;width:80%" />
 >
-> <img src="./docs/c2.png" alt="image-20230505101851583" style="zoom: 33%;" />
+> 
 
 - [Simple-chat](#Simple-chat)
   - [介绍](#介绍)
@@ -160,7 +160,7 @@ npm install -g http-server
 可在packge.json内配置
 ```
 
-![img](https://img-blog.csdnimg.cn/2043ccbd896f45dfaf065b6b5800f7b1.png)![点击并拖拽以移动](data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==)
+<img style="max-width: 80%" src="./docs/c3.png" />
 
 ```
 配置完后：yarn http 即可
@@ -176,14 +176,15 @@ npm install -g http-server
 
 <div style="display: flex; gap: 20px;">
 	<div style="text-align: center">
-		<img style="max-width: 50%" src="./docs/wechat.jpg" alt="微信" />
+		<img style="max-width: 40%" src="./docs/wechat.jpg" alt="微信" />
 		<p>WeChat Pay</p>
 	</div>
 	<div style="text-align: center">
-		<img style="max-width: 50%" src="./docs/alipay.jpg" alt="支付宝" />
+		<img style="max-width: 40%" src="./docs/alipay.jpg" alt="支付宝" />
 		<p>Alipay</p>
 	</div>
 </div>
+
 
 
 
