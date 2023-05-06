@@ -4,7 +4,7 @@
 >
 > **此项目只适配于H5端**，**线上地址：http://47.242.53.5:888/ **
 >
-> **tip：如果不需要此弹框，则可以直接在env文件内填写`VUE_APP_BASE_API` = `你的caht秘钥`**
+> **tip：如果不需要此弹框，则可以直接在env文件内填写`VUE_APP_API_KEY` = `你的caht秘钥`**
 >
 > <img src="./docs/c1.png" alt="image-20230505141729128" style="zoom: 33%;" />
 >
@@ -24,6 +24,7 @@
     - [前端网页](#前端网页)
   - [环境变量](#环境变量)
   - [打包上线](#打包上线)
+  - [tip](#tip:本地模拟服务器，运行yarn build后的项目)
   - [赞助](#赞助)
   - [联系方式](#联系方式)
 
@@ -41,7 +42,7 @@
 
 1. 你应该首先使用 `API` 方式
 2. 使用 `API` 时，如果网络不通，那是国内被墙了，你需要自建代理，绝对不要使用别人的公开代理，那是危险的（**此项目已通过node.js代理请求openAI接口，理论上说是不需要再次使用代理工具的**）。
-3. 把项目发布到公共网络时，只需.env.pro中的 `VUE_APP_BASE_API` 变量，更改为你的公网ip地址，你也应该修改 `index.html` 中的 `title`，防止被关键词搜索到。
+3. 把项目发布到公共网络时，只需.env.pro中的 `VUE_APP_API_HOST` 变量，更改为你的公网ip地址，你也应该修改 `index.html` 中的 `title`，防止被关键词搜索到。
 
 环境变量：
 
@@ -74,7 +75,7 @@ npm install yarn -g
 ```
 # .env 文件
 
-# VUE_APP_BASE_API = '你的caht秘钥'
+# VUE_APP_API_KEY = '你的caht秘钥'
 
 ```
 
@@ -106,7 +107,7 @@ yarn
 
 `API` 可用：
 
-- `VUE_APP_BASE_API`  ：后台地址（本地默认：http://localhost:3005、线上例子：http://47.242.53.5:3005）
+- `VUE_APP_API_HOST`  ：后台地址（本地默认：http://localhost:3005、线上例子：http://47.242.53.5:3005）
 - `VUE_APP_API_KEY `：apiKey秘钥 [(获取 apiKey)](https://platform.openai.com/overview)
 
 ### 后端服务
@@ -137,7 +138,7 @@ yarn serve
 
 #### 前端网页
 
-1、修改根目录下 `.env.port  `文件中的`VUE_APP_BASE_API` 为你的后端公网ip地址
+1、修改根目录下 `.env.port  `文件中的`VUE_APP_API_HOST` 为你的后端公网ip地址
 
 2、根目录下运行以下命令，然后将 `dist` 文件夹内的文件复制到你网站服务的根目录下
 
@@ -149,20 +150,41 @@ pnpm build
 
 
 
+#### tip:本地模拟服务器，运行yarn build后的项目 
+
+```
+npm install -g http-server
+
+终端运行：http-server ./dist/ -p 8080 -o
+
+可在packge.json内配置
+```
+
+![img](https://img-blog.csdnimg.cn/2043ccbd896f45dfaf065b6b5800f7b1.png)![点击并拖拽以移动](data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==)
+
+```
+配置完后：yarn http 即可
+```
+
+
+
 ## 赞助
 
 如果你觉得这个项目对你有帮助，并且情况允许的话，可以我小小的支持，总之非常感谢支持～
 
+
+
 <div style="display: flex; gap: 20px;">
 	<div style="text-align: center">
-		<img style="max-width: 100%" src="./docs/wechat.jpg" alt="微信" />
+		<img style="max-width: 50%" src="./docs/wechat.jpg" alt="微信" />
 		<p>WeChat Pay</p>
 	</div>
 	<div style="text-align: center">
-		<img style="max-width: 100%" src="./docs/alipay.jpg" alt="支付宝" />
+		<img style="max-width: 50%" src="./docs/alipay.jpg" alt="支付宝" />
 		<p>Alipay</p>
 	</div>
 </div>
+
 
 
 

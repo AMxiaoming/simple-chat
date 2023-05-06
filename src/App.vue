@@ -81,6 +81,7 @@ export default {
   },
   methods: {
     getData () {
+      console.log(process.env.VUE_APP_API_HOST, 'process.env.VUE_APP_API_HOST');
       this.openAIKey = process.env.VUE_APP_API_KEY || localStorage.getItem('OPEN-API-KEY') || ''
       this.keyValue = this.openAIKey
     },
@@ -96,13 +97,13 @@ export default {
       this.userVal.push('loading...')
       this.scrollFn()
       const res = await chatApi({ message: [{ "role": "user", "content": `${val}` }], apiKey: this.openAIKey })
-      if(res.code === 200 && res.msg) {
+      if (res.code === 200 && res.msg) {
         this.chatText = res.msg.choices[0].message.content || '接口返回错误'
       } else if (res.content && res.content.status === 429) {
         this.chatText = '接口请求频繁，请稍后重试'
       } else if (res.content && res.content.status === 401) {
         this.openAIKey = ''
-        this.keyValue =''
+        this.keyValue = ''
         this.chatText = '请填写正确的apiKey'
       } else {
         this.chatText = '未知错误，请稍后重试'
@@ -148,7 +149,8 @@ export default {
 }
 
 /* 对话内容样式 */
-.user-content,.chat-content {
+.user-content,
+.chat-content {
   position: relative;
   display: flex;
   align-items: flex-start;
@@ -157,9 +159,11 @@ export default {
   background: #95ec69;
   color: #000;
 }
+
 .user-content {
   justify-content: flex-end;
 }
+
 .chat-content {
   background: #ffffff;
 }
@@ -194,6 +198,7 @@ export default {
 .user-content span:first-child {
   text-align: right;
 }
+
 /* 底部输入框 */
 .fixed-bottom {
   position: fixed;

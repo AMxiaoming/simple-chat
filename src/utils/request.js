@@ -5,10 +5,10 @@ axios.defaults.headers['Content-Type'] = 'application/json;charset=utf-8'
 // 对应国际化资源文件后缀
 axios.defaults.headers['Access-Control-Allow-Origin'] = '*'
 
-let VUE_APP_BASE_API = process.env.VUE_APP_BASE_API
+let VUE_APP_API_HOST =  process.env.VUE_APP_API_HOST
 
 const service = axios.create({
-  baseURL: VUE_APP_BASE_API,
+  baseURL: VUE_APP_API_HOST,
   // 超时
   timeout: 30000
 })
@@ -31,9 +31,9 @@ service.interceptors.response.use(function (response) {
   } else if (response.data.code === 400 && response.data.content.status === 401) {
     Notify({ type: 'warning', message: 'API-KEY填写有误，请重新填写' })
     localStorage.removeItem('OPEN-API-KEY')
-    setTimeout(()=>{
+    setTimeout(() => {
       location.reload()
-    },3000)
+    }, 2000)
   } else if (response.data.code === 400 && response.data.content.status === 429) {
     Notify({ type: 'warning', message: '接口请求频繁，请稍后重试' })
   } else {
